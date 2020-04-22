@@ -13,6 +13,8 @@
 		AB3B73472450A5C400D45CB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3B73452450A5C400D45CB2 /* Main.storyboard */; };
 		AB3B73492450A5CC00D45CB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3B73482450A5CC00D45CB2 /* Assets.xcassets */; };
 		AB3B734C2450A5CC00D45CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3B734A2450A5CC00D45CB2 /* LaunchScreen.storyboard */; };
+		AB3B73552450A67E00D45CB2 /* calculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B73532450A67E00D45CB2 /* calculatorModel.swift */; };
+		AB3B73562450A67E00D45CB2 /* calculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B73542450A67E00D45CB2 /* calculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AB3B73482450A5CC00D45CB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3B734B2450A5CC00D45CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB3B734D2450A5CC00D45CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3B73532450A67E00D45CB2 /* calculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculatorModel.swift; sourceTree = "<group>"; };
+		AB3B73542450A67E00D45CB2 /* calculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		AB3B733E2450A5C400D45CB2 /* iCalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				AB3B73532450A67E00D45CB2 /* calculatorModel.swift */,
+				AB3B73542450A67E00D45CB2 /* calculatorViewController.swift */,
 				AB3B733F2450A5C400D45CB2 /* AppDelegate.swift */,
 				AB3B73412450A5C400D45CB2 /* SceneDelegate.swift */,
 				AB3B73432450A5C400D45CB2 /* ViewController.swift */,
@@ -140,7 +146,9 @@
 			files = (
 				AB3B73442450A5C400D45CB2 /* ViewController.swift in Sources */,
 				AB3B73402450A5C400D45CB2 /* AppDelegate.swift in Sources */,
+				AB3B73562450A67E00D45CB2 /* calculatorViewController.swift in Sources */,
 				AB3B73422450A5C400D45CB2 /* SceneDelegate.swift in Sources */,
+				AB3B73552450A67E00D45CB2 /* calculatorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
