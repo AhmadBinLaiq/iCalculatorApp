@@ -105,9 +105,8 @@ class calculatorModel {
             }
         case "+":
             // Add
-            // expression +9*1 gives error
             CheckDoubleCharactersFromDisplayString(seqToRemove: "++", toReplace: "+",signal: 3)
-            if  getcalculationString().isEmpty == true {
+            if  getcalculationString().isEmpty {
                 setcalculationString(calculationString:  forExpresionLabelSpecialCase + "+" )// latest
                 setdisplayString(displayString:  getcalculationString())
                 forExpresionLabelSpecialCase = getdisplayString()
@@ -133,7 +132,7 @@ class calculatorModel {
             
             CheckDoubleCharactersFromDisplayString(seqToRemove: "--", toReplace: "-",signal: 3)
             // Subtract
-            if  getcalculationString().isEmpty == true {
+            if  getcalculationString().isEmpty {
                 setcalculationString(calculationString:  forExpresionLabelSpecialCase + "-" )
                 setdisplayString(displayString:  getcalculationString())
                 forExpresionLabelSpecialCase = getdisplayString()
@@ -156,7 +155,7 @@ class calculatorModel {
         case "x":
             
             CheckDoubleCharactersFromDisplayString(seqToRemove: "xx", toReplace: "x",signal: 1)
-            if  getcalculationString().isEmpty == true {
+            if  getcalculationString().isEmpty {
                 setcalculationString(calculationString:  forExpresionLabelSpecialCase + "" )
                 setdisplayString(displayString:  getcalculationString())
                 
@@ -164,9 +163,9 @@ class calculatorModel {
             }
             else if (String( getcalculationString().last!) ==  getOperator()){
                 setcalculationString(calculationString: String( getcalculationString().dropLast()))
-                setcalculationString(calculationString:  getcalculationString() + "*" )//calculationString.append("*")
+                setcalculationString(calculationString:  getcalculationString() + "*" )
                 setdisplayString(displayString: String( getdisplayString().dropLast()))
-                setdisplayString(displayString:  getdisplayString() + "x")//displayString.append("x")
+                setdisplayString(displayString:  getdisplayString() + "x")
                 
                 setOperator(operatr: "*")
                 //
@@ -181,17 +180,17 @@ class calculatorModel {
         case "÷":
             
             CheckDoubleCharactersFromDisplayString(seqToRemove: "÷÷", toReplace: "÷",signal: 2)
-            if  getcalculationString().isEmpty == true {
-                setcalculationString(calculationString:  forExpresionLabelSpecialCase + " " )//calculationString.append(" ")
+            if  getcalculationString().isEmpty {
+                setcalculationString(calculationString:  forExpresionLabelSpecialCase + " " )
                 setdisplayString(displayString:  getcalculationString())
                 //
-                setOperator(operatr: "/")//operatr = "/"
+                setOperator(operatr: "/")
             }
             else if (String( getcalculationString().last!) ==  getOperator()){
                 setcalculationString(calculationString: String( getcalculationString().dropLast()))
-                setcalculationString(calculationString:  getcalculationString() + "/" )//calculationString.append("/")
+                setcalculationString(calculationString:  getcalculationString() + "/" )
                 setdisplayString(displayString: String( getdisplayString().dropLast()))
-                setdisplayString(displayString:  getdisplayString() + "÷")//displayString.append("÷")
+                setdisplayString(displayString:  getdisplayString() + "÷")
                 
                 setOperator(operatr: "/")
             }
@@ -207,11 +206,10 @@ class calculatorModel {
         case "%":
             // modulo check yet to do
             CheckDoubleCharactersFromDisplayString(seqToRemove: "%%", toReplace: "%", signal: 0)
-            if  getcalculationString().isEmpty == true {
-                //calculationString.append(" ")
+            if  getcalculationString().isEmpty {
                 setdisplayString(displayString:  forExpresionLabelSpecialCase)
                 forExpresionLabelSpecialCase = getdisplayString()
-                //
+           
             }
             else if String( getcalculationString().last!).isInt {
                 forExpresionLabelSpecialCase = getdisplayString()
@@ -228,19 +226,18 @@ class calculatorModel {
             else if (String( getcalculationString().last!) ==  getOperator()){
                 setcalculationString(calculationString: String( getcalculationString().dropLast()))
                 if  getcalculationString() != ""{
-                    setcalculationString(calculationString:  getcalculationString() + "/100" )//calculationString.append("/100")
+                    setcalculationString(calculationString:  getcalculationString() + "/100" )
                     setdisplayString(displayString: String( getdisplayString().dropLast()))
                     setdisplayString(displayString:  getdisplayString() + "%")
                     
                     setOperator(operatr: "/100")
                 }
                 else {
-                    // rola // corretion
-                    setcalculationString(calculationString:  getcalculationString() + "/100" )//calculationString.append("/100")
+                    
+                    setcalculationString(calculationString:  getcalculationString() + "/100")
                     setdisplayString(displayString: String( getdisplayString().dropLast()))
                     setdisplayString(displayString:  getdisplayString() + "%")
-                    
-                    //
+                 
                 }
             }
             
@@ -248,7 +245,7 @@ class calculatorModel {
             // Decimal
             
             CheckDoubleCharactersFromDisplayString(seqToRemove: "..", toReplace: ".",signal: 5)
-            if  getcalculationString().isEmpty == true {
+            if  getcalculationString().isEmpty {
                 setcalculationString(calculationString:  forExpresionLabelSpecialCase + "." )
                 setdisplayString(displayString:  getcalculationString())
                 //
@@ -258,7 +255,7 @@ class calculatorModel {
                 setcalculationString(calculationString: String( getcalculationString().dropLast()))
                 setcalculationString(calculationString:  getcalculationString() + "." )
                 setdisplayString(displayString: String( getdisplayString().dropLast()))
-                setdisplayString(displayString:  getdisplayString() + ".")//displayString.append(".")
+                setdisplayString(displayString:  getdisplayString() + ".")
                 
                 setOperator(operatr: ".")//operatr = "."
                 //
@@ -283,9 +280,8 @@ class calculatorModel {
             setResult(result: nil)
         case "+/-":
             
-            //            print(calculationString)
             if  getcalculationString().isEmpty {
-                setcalculationString(calculationString: "-" + forExpresionLabelSpecialCase  )//calculationString.append("-")
+                setcalculationString(calculationString: "-" + forExpresionLabelSpecialCase  )
                 setdisplayString(displayString:  getcalculationString())
                 forExpresionLabelSpecialCase = getdisplayString()
                 
@@ -295,13 +291,12 @@ class calculatorModel {
                 setcalculationString(calculationString: String( getcalculationString().dropLast()))
                 setcalculationString(calculationString:  "-" + getcalculationString() )
                 setdisplayString(displayString: String( getdisplayString().dropLast()))
-                setdisplayString(displayString:  "-" + getdisplayString())//displayString.append("-")
+                setdisplayString(displayString:  "-" + getdisplayString())
                 forExpresionLabelSpecialCase = getdisplayString()
                 setOperator(operatr: "-")
-                //
-              //  setOperator(operatr: "-")
+              
             }
-            else if (( getcalculationString().contains("+") == false) && ( getcalculationString().contains("-") == false) && ( getcalculationString().contains("*") == false) && ( getcalculationString().contains("/") == false)) || getresultString() != "" // recently added
+            else if (( getcalculationString().contains("+") == false) && ( getcalculationString().contains("-") == false) && ( getcalculationString().contains("*") == false) && ( getcalculationString().contains("/") == false)) || getresultString() != ""
             {
                 setOperator(operatr: "-")
                 setcalculationString(calculationString: "-" +  getcalculationString())
@@ -316,7 +311,7 @@ class calculatorModel {
                 CheckDoubleCharactersFromDisplayString(seqToRemove: "--", toReplace: "",signal: 3)
             }
             else if  getResult() != nil  {
-                setOperator(operatr: "-")//operatr = "-"
+                setOperator(operatr: "-")
                 displayString = ["-", getResult() as? String].compactMap{$0}.joined()
                 forExpresionLabelSpecialCase = getdisplayString()
                 resultString = displayString
@@ -328,7 +323,7 @@ class calculatorModel {
                 CheckDoubleCharactersFromDisplayString(seqToRemove: "--", toReplace: "",signal: 3)
             }
             else {
-                setOperator(operatr: "-")//operatr = "-"
+                setOperator(operatr: "-")
                 calculationString = "-" + calculationString
                 //
             }
@@ -351,7 +346,7 @@ class calculatorModel {
         if(displayString.contains(seqToRemove))
         {
             displayString = displayString.replacingOccurrences(of: seqToRemove, with: toReplace)
-            //expressionLabel?.text = displayString
+            
             
             if signal == 1 { // for multiplication
                 calculationString = calculationString.replacingOccurrences(of: "**", with: "*")
@@ -364,9 +359,7 @@ class calculatorModel {
                     let temp : String =  "\(result ?? "0")"
                     resultString = temp.replacingOccurrences(of: "-", with: "")
                 }
-                else {
-                    //                      resultString = displayString
-                }
+                
                 calculationString = displayString
             }
             else if signal == 5 { // for '.'
@@ -383,14 +376,14 @@ class calculatorModel {
                 displayString = String(displayString.dropLast())
             }
             if calculationString.isEmpty {
-                //                   expressionLabel?.text = calculationString
+                
                 resultString = calculationString
                 displayString = calculationString
                 result = calculationString
             }
             else
             {
-                if String(calculationString.last!).isInt == false &&  String(calculationString.last!) != "." { //added at 1:00 AM
+                if String(calculationString.last!).isInt == false &&  String(calculationString.last!) != "." { 
                     calculationString = String(calculationString.dropLast())
                     displayString = calculationString
                     resultString = displayString
@@ -408,9 +401,8 @@ class calculatorModel {
                     
                 }
                 else if result != nil {
-                    //forExpresionLabelSpecialCase = displayString
                     forExpresionLabelSpecialCase = resultString
-                    displayString = "" // recent update
+                    displayString = ""
                     calculationString = ""
                     
                 }

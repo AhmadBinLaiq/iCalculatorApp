@@ -14,7 +14,7 @@ class calculatorViewController: UIViewController{
     @IBAction func themeButtonAction(_ sender: Any) {
         changeThemeOnSignal()
     }
-    //private var result : Any?
+   
     
     var calculator = calculatorModel()
     
