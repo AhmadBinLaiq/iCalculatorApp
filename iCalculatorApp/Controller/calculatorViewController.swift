@@ -43,7 +43,6 @@ class calculatorViewController: UIViewController{
                 print(button.frame.width)
             }
             if button.title(for: .normal) == "." {
-                
                 button.widthAnchor.constraint(equalToConstant: width).isActive = true
             }
         }
